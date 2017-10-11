@@ -7,7 +7,68 @@ html
 html, body
   width: 100%
   height: 100%
+  overflow: hidden
 
 p, li, ul
   margin: 0
   padding: 0
+
+ul
+  list-style: none
+
+.container
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  margin: auto auto
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  background-color: pink
+  width: 50%
+  height: 400px
+
+.progress
+  position: relative
+  flex: 1
+  background-color: green
+  width: 100%
+  height: 100%
+.progress__bullet
+  height: 8%
+  width: 32px
+  border-radius: 50%
+  z-index: 10
+  background-color: white
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  margin: 0 auto
+.progress__bg-placeholder
+  width: 20px
+  height: 100%
+  background-color: purple
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  margin: 0 auto
+
+.list__grid
+  flex: 2
+  width: 100%
+  height: 100%
+  background-color: orange
+.list__items
+  position: relative
+  height: 10%
+  background-color: red
+  outline: solid 1px black
+  padding-left: 5%
+  p
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
