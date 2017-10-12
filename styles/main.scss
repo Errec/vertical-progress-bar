@@ -45,17 +45,40 @@ ul
   position: absolute
   left: 0
   right: 0
-  top: 0
+  top: 21%
   margin: 0 auto
-.progress__bg-placeholder
-  width: 20px
+
+.progress__grid
   height: 100%
-  background-color: purple
+  width: 100%
+.progress__bullet-placeholder-item
+  position: relative
+  height: 10%
+  width: 100%
+  background-color: pink
+  outline: solid 1px blue
+.progress__bullet-placehoder
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  margin: auto auto
+  height: 80%
+  width: 32px
+  border-radius: 50%
+  background-color: orange
+.progress__bg-placeholder
+  z-index: 1
+  width: 15px
+  height: 90%
+  background-color: orange
   position: absolute
   left: 0
   right: 0
   top: 0
-  margin: 0 auto
+  bottom: 0
+  margin: auto auto
 
 .list__grid
   flex: 2
