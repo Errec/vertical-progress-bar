@@ -14,45 +14,17 @@ html(lang="en")
         div.progress__bullet
         div.progress__bg-placeholder
         ul.progress__grid
-          li.progress__bullet-placeholder-item
-            div.progress__bullet-placehoder
-          li.progress__bullet-placeholder-item
-            div.progress__bullet-placehoder
-          li.progress__bullet-placeholder-item
-            div.progress__bullet-placehoder
-          li.progress__bullet-placeholder-item
-            div.progress__bullet-placehoder
-          li.progress__bullet-placeholder-item
-            div.progress__bullet-placehoder
-          li.progress__bullet-placeholder-item
-            div.progress__bullet-placehoder
-          li.progress__bullet-placeholder-item
-            div.progress__bullet-placehoder
-          li.progress__bullet-placeholder-item
-            div.progress__bullet-placehoder
-          li.progress__bullet-placeholder-item
-            div.progress__bullet-placehoder
-          li.progress__bullet-placeholder-item
-            div.progress__bullet-placehoder
+          - var index = 0;
+          while index < 10
+            li.progress__bullet-placeholder-item
+              div.progress__bullet-placehoder
+            - index++
       ul.list__grid
-        li.list__items
-          p STEP 1
-        li.list__items
-          p STEP 2
-        li.list__items
-          p STEP 3
-        li.list__items
-          p STEP 4
-        li.list__items
-          p STEP 5
-        li.list__items
-          p STEP 6
-        li.list__items
-          p STEP 7
-        li.list__items
-          p STEP 8
-        li.list__items
-          p STEP 9
-        li.list__items
-          p STEP 10
+        - var n = 0;
+        while n < 10
+          li.list__items
+            p= 'STEP ' + ++n
+      div.btns
+        button.btn.btns__back
+        button.btn.btns__next
     script(src="js/bundle.min.js")
