@@ -64,6 +64,10 @@ ul
   width: 32px
   border-radius: 50%
   background-color: orange
+  transition: opacity 0.8s ease-in-out
+.progress__bullet-placehoder--hide
+  transition: opacity 0.1s ease-in-out
+  opacity: 0
 .progress__bg-placeholder
   z-index: 1
   width: 15px
@@ -75,7 +79,6 @@ ul
   top: 0
   bottom: 0
   margin: auto auto
-
 .list__grid
   display: inline-block
   width: 50%
