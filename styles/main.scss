@@ -33,18 +33,29 @@ ul
   background-color: green
   width: 50%
   height: 100%
-.progress__bullet
-  height: 8%
-  width: 32px
-  border-radius: 50%
+.progress__bar
+  top: 1%
+  height: 0
+  transform: translateY(16px)
+  width: 16px
   z-index: 10
   background-color: white
   position: absolute
   left: 0
   right: 0
-  top: 1%
   margin: 0 auto
   transition: all 0.3s ease-in-out
+  &:after
+    content: ""
+    transform: translateY(-16px)
+    position: absolute
+    width: 32px
+    height: 32px
+    bottom: -32px
+    border-radius: 50%
+    right: -50%
+    background:
+      color: red
 .progress__grid
   height: 100%
   width: 100%
@@ -70,7 +81,7 @@ ul
   opacity: 0
 .progress__bg-placeholder
   z-index: 1
-  width: 15px
+  width: 16px
   height: 90%
   background-color: orange
   position: absolute
