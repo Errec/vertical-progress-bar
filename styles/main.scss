@@ -23,14 +23,14 @@ ul
   right: 0
   bottom: 0
   margin: auto auto
-  background-color: pink
+  // background-color: pink
   width: 50%
   height: 400px
 
 .progress
   position: relative
   display: inline-block
-  background-color: green
+  // background-color: green
   width: 50%
   height: 100%
 .progress__bar
@@ -39,7 +39,8 @@ ul
   transform: translateY(16px)
   width: 16px
   z-index: 10
-  background-color: white
+  background-color: chocolate
+  border-radius: 8px
   position: absolute
   left: 0
   right: 0
@@ -63,7 +64,7 @@ ul
   position: relative
   height: 10%
   width: 100%
-  background-color: pink
+  // background-color: pink
 .progress__bullet-placehoder
   position: absolute
   top: 0
@@ -80,6 +81,7 @@ ul
   transition: opacity 0.1s ease-in-out
   opacity: 0
 .progress__bg-placeholder
+  border-radius: 8px
   z-index: 1
   width: 16px
   height: 90%
@@ -98,7 +100,7 @@ ul
 .list__items
   position: relative
   height: 10%
-  background-color: red
+  // background-color: red
   padding-left: 5%
   p
     position: absolute
