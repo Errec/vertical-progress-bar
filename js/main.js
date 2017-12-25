@@ -3,6 +3,7 @@ var back              = document.querySelector('.btns__back');
 var bar               = document.querySelector('.progress__bar');
 var placeholders      = document.querySelectorAll('.progress__bullet-placeholder-item');
 var placeholderBullet = document.querySelectorAll('.progress__bullet-placehoder');
+var barBullet         = document.querySelector('.progress__bar-bullet');
 
 var MAX_ITEMS = placeholders.length;
 var step      = 0;
@@ -13,6 +14,7 @@ back.addEventListener('click', stepBack);
 function stepForward() {
   if (step < MAX_ITEMS - 1) {
     bar.style.height = (++step * 10) + '%';
+    barBullet.style.transform = 'rotate(' + 120 * step + 'deg)';
   }
   renderPlaceholder();
 }
@@ -20,6 +22,7 @@ function stepForward() {
 function stepBack() {
   if (step > 0) {
     bar.style.height = (--step * 10) + '%';
+    barBullet.style.transform = 'rotate(' + 120 * step + 'deg)';
   }
   renderPlaceholder();
 }
