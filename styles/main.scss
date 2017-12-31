@@ -39,13 +39,17 @@ ul
   transform: translateY(20px)
   width: 20px
   z-index: 10
-  background-color: chocolate
   border-radius: 8px
   position: absolute
   left: 0
   right: 0
   margin: 0 auto
   transition: all 0.6s ease-in-out
+  background:
+    image: url('../img/bg_bar.png')
+    repeat: repeat-y
+    size: 20px
+    position: top
 .progress__bar-bullet
   transition: all 0.6s ease-in-out
   position: absolute
@@ -78,7 +82,7 @@ ul
   width: 40px
   border-radius: 50%
   background-color: orange
-  transition: opacity 0.8s ease-in-out
+  transition: opacity 1.5s ease-in-out
 .progress__bullet-placehoder--hide
   transition: opacity 0.1s ease-in-out
   opacity: 0
