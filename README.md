@@ -1,3 +1,3 @@
-Vertical progress bar for wizard menus
+Simpsons themed Vertical progress bar for wizard menus
 
 http://progressbar.surge.sh/
