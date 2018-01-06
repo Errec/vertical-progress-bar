@@ -22,6 +22,7 @@ ul
   list-style: none
 
 .container
+  text-align: center
   min-width: 300px;
   position: absolute
   top: 2%;
@@ -41,7 +42,7 @@ ul
   position: relative
   display: inline-block
   // background-color: green
-  width: 50%
+  width: 100px
   height: 90%
 .progress__bar
   top: 0
@@ -109,18 +110,66 @@ ul
   bottom: 0
   margin: auto auto
 .list__grid
+  position: relative
   display: inline-block
-  width: 50%
+  width: 100px
   height: 90%
+
+$itemHeight: 7.6666%
+$itemZindex: 100
+
 .list__items
   position: relative
-  height: 10%
-  // background-color: red
-  padding-left: 5%
-  p
-    position: absolute
-    top: 50%
-    transform: translateY(-50%)
+  height: 30%
+  position: absolute;
+  width: 100px
+  text-align: center
+  img
+    height: 100%
+  // background:
+  //   position: center
+  //   size: contain
+  //   repeat: no-repeat
+
+  &:nth-child(2n)
+    right: 20%
+
+  &:nth-child(1)
+    top: $itemHeight * 0
+    z-index: $itemZindex + 0
+  &:nth-child(2)
+    top: $itemHeight * 1
+    z-index: $itemZindex - 1
+  &:nth-child(3)
+    img
+      height: 60%
+    top: $itemHeight * 2
+    z-index: $itemZindex - 2
+  &:nth-child(4)
+    img
+      height: 60%
+    top: $itemHeight * 3
+    z-index: $itemZindex - 3
+  &:nth-child(5)
+    img
+      height: 45%
+    top: $itemHeight * 4
+    z-index: $itemZindex - 4
+  &:nth-child(6)
+    top: $itemHeight * 5
+    z-index: $itemZindex - 5
+  &:nth-child(7)
+    top: $itemHeight * 6
+    z-index: $itemZindex - 6
+  &:nth-child(8)
+    top: $itemHeight * 7
+    z-index: $itemZindex - 7
+  &:nth-child(9)
+    top: $itemHeight * 8
+    z-index: $itemZindex - 8
+  &:nth-child(10)
+    top: $itemHeight * 9
+    z-index: $itemZindex - 9
 
 .btns
   position: relative
