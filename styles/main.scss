@@ -5,8 +5,14 @@ html
   box-sizing: inherit;
 
 html, body
+  height: 100%;
   overflow: hidden
-  background-color: #FED41D
+  // background-color: #FED41D
+  background:
+    image: radial-gradient(ellipse farthest-corner at left bottom, #FEE531 0%, #FAD638 100%);
+    repeat: no-repeat
+    size: cover
+    position: center
 
 p, li, ul
   margin: 0
@@ -106,7 +112,6 @@ ul
   display: inline-block
   width: 50%
   height: 90%
-  background-color: orange
 .list__items
   position: relative
   height: 10%
