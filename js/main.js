@@ -4,6 +4,7 @@ var bar               = document.querySelector('.progress__bar');
 var placeholders      = document.querySelectorAll('.progress__bullet-placeholder-item');
 var placeholderBullet = document.querySelectorAll('.progress__bullet-placehoder');
 var barBullet         = document.querySelector('.progress__bar-bullet');
+var card              = document.querySelector('.list__items');
 
 var MAX_ITEMS = placeholders.length;
 var THROTTLE_TIME = 400;

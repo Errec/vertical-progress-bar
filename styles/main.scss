@@ -24,18 +24,18 @@ ul
   list-style: none
 
 .container
-  // text-align: center
   text-align: left
   width: 300px;
-  // min-width: 300px;
   position: absolute
   top: 0
   left: 0
   right: 0
   bottom: 0
   margin: auto auto
-  // width: 50%
-  max-height: 500px
+  min-height: 520px;
+  max-height: 540px;
+  height: 90%;
+  transform: translateY(6%);
   &:after
     content: ""
     display: table
@@ -44,7 +44,6 @@ ul
 .progress
   position: relative
   display: inline-block
-  // background-color: green
   width: 100px
   height: 90%
 .progress__bar
@@ -114,11 +113,12 @@ ul
   margin: auto auto
 .list__grid
   position: relative
+  transform: translate3d(0,-11%,0);
   display: inline-block
   width: 100px
   height: 90%
 
-$itemHeight: 7.6666%
+$itemHeight: 10%
 $itemZindex: 100
 
 .list__items
@@ -185,7 +185,6 @@ $itemZindex: 100
   &:nth-child(10)
     top: $itemHeight * 9
     z-index: $itemZindex - 9
-
 .btns
   position: relative
   width: 100%
@@ -194,7 +193,6 @@ $itemZindex: 100
   position: absolute
   width: 48%
   height: 100%
-
 .btn.btns__back
   left: 0
 .btn.btns__next
