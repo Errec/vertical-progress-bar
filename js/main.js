@@ -6,9 +6,9 @@ var placeholderBullet = document.querySelectorAll('.progress__bullet-placehoder'
 var barBullet         = document.querySelector('.progress__bar-bullet');
 var card              = document.querySelector('.list__items');
 
-var MAX_ITEMS = placeholders.length;
+var MAX_ITEMS     = placeholders.length;
 var THROTTLE_TIME = 400;
-var step      = 0;
+var step          = 0;
 
 next.addEventListener('click', _.throttle(stepForward, THROTTLE_TIME));
 back.addEventListener('click', _.throttle(stepBack, THROTTLE_TIME));
