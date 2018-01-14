@@ -4,7 +4,7 @@ var bar               = document.querySelector('.progress__bar');
 var placeholders      = document.querySelectorAll('.progress__bullet-placeholder-item');
 var placeholderBullet = document.querySelectorAll('.progress__bullet-placehoder');
 var barBullet         = document.querySelector('.progress__bar-bullet');
-var card              = document.querySelector('.list__items');
+var card              = document.querySelectorAll('.list__items');
 
 var MAX_ITEMS     = placeholders.length;
 var THROTTLE_TIME = 400;
@@ -17,6 +17,8 @@ function stepForward() {
   if (step < MAX_ITEMS - 1) {
     toggleDisableBtn(next);
     bar.style.height = (++step * 10) + '%';
+    card[step].style.zIndex = parseInt(window.getComputedStyle(card[step]).zIndex) + step + 1;
+    console.log(parseInt(window.getComputedStyle(card[step]).zIndex) + 1);
     barBullet.style.transform = 'rotate(' + 120 * step + 'deg)';
     renderPlaceholder();
   }
@@ -25,6 +27,7 @@ function stepForward() {
 function stepBack () {
   if (step > 0) {
     toggleDisableBtn(back);
+    card[step].style.zIndex = parseInt(window.getComputedStyle(card[step]).zIndex) - step - 1;
     bar.style.height = (--step * 10) + '%';
     barBullet.style.transform = 'rotate(' + 120 * step + 'deg)';
     renderPlaceholder();
