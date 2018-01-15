@@ -121,7 +121,7 @@ ul
 $itemHeight: 10%
 $itemZindex: 100
 
-.list__items
+.list__item
   position: relative
   height: 30%
   background-color: #39b6ef
@@ -131,6 +131,7 @@ $itemZindex: 100
   position: absolute;
   width: 100px
   text-align: center
+  transition: all 0.4s ease-in-out;
   img
     height: 100%
   p
@@ -139,7 +140,7 @@ $itemZindex: 100
     letter-spacing: -2px
     user-select: none;
     color: white
-    font-size: 0.85rem
+    font-size: 0.8rem
     font-weight: bold
     text-transform: uppercase
     position: absolute
@@ -185,6 +186,9 @@ $itemZindex: 100
   &:nth-child(10)
     top: $itemHeight * 9
     z-index: $itemZindex - 9
+
+.list__item--translate
+  transform: translate3d(130%, 0, 0);
 .btns
   position: relative
   width: 100%
