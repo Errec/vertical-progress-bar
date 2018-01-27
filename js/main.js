@@ -15,17 +15,21 @@ back.addEventListener('click', _.throttle(stepBack, THROTTLE_TIME));
 
 function stepForward() {
   if (step < MAX_ITEMS - 1) {
+    next.classList.add('btn--click');
     toggleDisableBtn(next);
     bar.style.height = (++step * 10) + '%';
     barBullet.style.transform = 'rotate(' + 120 * step + 'deg)';
     renderPlaceholder();
 
     card[step].classList.add('list__item--translate');
+    card[step].classList.toggle('list__item--selected');
+    card[step - 1].classList.toggle('list__item--selected');
     setTimeout(function () {
       card[step].classList.remove('list__item--translate');
     }, 400);
     setTimeout(function () {
       card[step].style.zIndex = parseInt(window.getComputedStyle(card[step]).zIndex) + step;
+      next.classList.remove('btn--click');
     }, 200);
   }
 }
@@ -35,14 +39,18 @@ function stepBack () {
     toggleDisableBtn(back);
     bar.style.height = (--step * 10) + '%';
     barBullet.style.transform = 'rotate(' + 120 * step + 'deg)';
+    back.classList.add('btn--click');
     renderPlaceholder();
 
+    card[step].classList.toggle('list__item--selected');
+    card[step + 1].classList.toggle('list__item--selected');
     card[step].classList.add('list__item--translate');
     setTimeout(function () {
       card[step].classList.remove('list__item--translate');
     }, 400);
     setTimeout(function () {
       card[step + 1].style.zIndex = parseInt(window.getComputedStyle(card[step]).zIndex) - step - 1;
+      back.classList.remove('btn--click');
     }, 200);
   }
 }

@@ -21,7 +21,7 @@ html(lang="en")
               div.progress__bullet-placehoder
             - index++
       ul.list__grid
-        li.list__item
+        li.list__item.list__item--selected
           img(src="img/characters/homer.png", alt="")
           p Homer
         li.list__item
@@ -52,8 +52,8 @@ html(lang="en")
           img(src="img/characters/ned.png", alt="")
           p Ned
       div.btns
-        button.btn.btns__back back
-        button.btn.btns__next next
+        button.btn.btns__back
+        button.btn.btns__next
 
     script(src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js")
     script(src="js/bundle.min.js")

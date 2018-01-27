@@ -134,13 +134,20 @@ $itemZindex: 100
   transition: all 0.4s ease-in-out;
   img
     height: 100%
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: height 0.2s 0.5s linear;
   p
     writing-mode: vertical-rl;
     text-orientation: upright;
     letter-spacing: -2px
     user-select: none;
     color: white
-    font-size: 0.8rem
+    font-size: 0.78rem
     font-weight: bold
     text-transform: uppercase
     position: absolute
@@ -186,18 +193,41 @@ $itemZindex: 100
   &:nth-child(10)
     top: $itemHeight * 9
     z-index: $itemZindex - 9
-
+.list__item--selected
+  img
+   height: 120%
 .list__item--translate
   transform: translate3d(130%, 0, 0);
 .btns
+  z-index: -1
   position: relative
   width: 100%
   height: 8%
+  right: 8%;
 .btn
+  &:hover
+   transform: scale(1.4)
+  cursor: pointer
+  transition: transform ease-in-out 0.1s
+  border: none
+  outline: none
+  background:
+    color: transparent;
+    position: center
+    size: contain
+    repeat: no-repeat
   position: absolute
-  width: 48%
+  width: 28%
   height: 100%
 .btn.btns__back
+  background:
+    image: url(../img/arrow-back.svg)
   left: 0
 .btn.btns__next
   right: 0
+  background:
+    image: url(../img/arrow-next.svg)
+
+.btn--click
+  &:hover
+    transform: scale(1.6)
