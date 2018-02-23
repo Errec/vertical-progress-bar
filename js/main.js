@@ -9,12 +9,14 @@ var card              = document.querySelectorAll('.list__item');
 var MAX_ITEMS     = placeholders.length;
 var THROTTLE_TIME = 400;
 var step          = 0;
+var currentZIndex = parseInt(window.getComputedStyle(card[0]).zIndex);
 
 next.addEventListener('click', _.throttle(stepForward, THROTTLE_TIME));
 back.addEventListener('click', _.throttle(stepBack, THROTTLE_TIME));
 
 function stepForward() {
   if (step < MAX_ITEMS - 1) {
+    currentZIndex++;
     next.classList.add('btn--click');
     toggleDisableBtn(next);
     bar.style.height = (++step * 10) + '%';
@@ -28,7 +30,7 @@ function stepForward() {
       card[step].classList.remove('list__item--translate');
     }, 400);
     setTimeout(function () {
-      card[step].style.zIndex = parseInt(window.getComputedStyle(card[step]).zIndex) + step;
+      card[step].style.zIndex = currentZIndex;
       next.classList.remove('btn--click');
     }, 200);
   }
@@ -36,6 +38,7 @@ function stepForward() {
 
 function stepBack () {
   if (step > 0) {
+    currentZIndex++;
     toggleDisableBtn(back);
     bar.style.height = (--step * 10) + '%';
     barBullet.style.transform = 'rotate(' + 120 * step + 'deg)';
@@ -49,7 +52,7 @@ function stepBack () {
       card[step].classList.remove('list__item--translate');
     }, 400);
     setTimeout(function () {
-      card[step + 1].style.zIndex = parseInt(window.getComputedStyle(card[step]).zIndex) - step - 1;
+      card[step].style.zIndex = currentZIndex;
       back.classList.remove('btn--click');
     }, 200);
   }
