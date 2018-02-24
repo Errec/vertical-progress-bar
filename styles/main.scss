@@ -1,18 +1,18 @@
 html
-  box-sizing: border-box;
+  box-sizing: border-box
 
 *, *:before, *:after
-  box-sizing: inherit;
+  box-sizing: inherit
 
 html, body
   position: relative
-  height: 100%;
-  width: 100%;
+  height: 100%
+  width: 100%
   margin: 0
   padding: 0
   overflow-y: auto
   background:
-    image: radial-gradient(ellipse farthest-corner at left bottom, #FEE531 0%, #FAD638 100%);
+    image: radial-gradient(ellipse farthest-corner at left bottom, #FEE531 0%, #FAD638 100%)
     repeat: no-repeat
     size: cover
     position: center
@@ -26,16 +26,16 @@ ul
 
 .container
   text-align: left
-  width: 300px;
+  width: 300px
   position: absolute
   top: 12px
   left: 0
   right: 0
   margin: 0 auto
-  min-height: 520px;
-  max-height: 540px;
-  height: 90%;
-  transform: translateY(0);
+  min-height: 520px
+  max-height: 540px
+  height: 90%
+  transform: translateY(0)
   &:after
     content: ""
     display: table
@@ -46,7 +46,7 @@ ul
   display: inline-block
   width: 100px
   height: 90%
-  transform: translateY(11%);
+  transform: translateY(11%)
 .progress__bar
   top: 0
   height: 0
@@ -84,7 +84,7 @@ ul
   position: relative
   height: 10%
   width: 100%
-  // background-color: pink
+
 .progress__bullet-placehoder
   position: absolute
   top: 0
@@ -129,24 +129,24 @@ $itemZindex: 100
   border: solid white 4px
   border-radius: 3px
   padding: 4px
-  position: absolute;
+  position: absolute
   width: 100px
   text-align: center
-  transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out
   img
     height: 100%
-    position: absolute;
-    margin: auto;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    transition: height 0.2s 0.5s linear;
+    position: absolute
+    margin: auto
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    transition: height 0.2s 0.5s linear
   p
-    writing-mode: vertical-rl;
-    text-orientation: upright;
+    writing-mode: vertical-rl
+    text-orientation: upright
     letter-spacing: -2px
-    user-select: none;
+    user-select: none
     color: white
     font-size: 0.78rem
     font-weight: bold
@@ -196,26 +196,26 @@ $itemZindex: 100
     z-index: $itemZindex - 9
 .list__item--selected
   img
-   height: 120%
+    height: 120%
 .list__item--translate
-  transform: translate3d(130%, 0, 0);
+  transform: translate3d(130%, 0, 0)
 .btns
   z-index: -1
   position: relative
   width: 100%
   height: 8%
-  right: 8%;
+  right: 8%
   bottom: -9%
   margin-bottom: 24px
 .btn
   &:hover
-   transform: scale(1.4)
+    transform: scale(1.4)
   cursor: pointer
   transition: transform ease-in-out 0.1s
   border: none
   outline: none
   background:
-    color: transparent;
+    color: transparent
     position: center
     size: contain
     repeat: no-repeat
