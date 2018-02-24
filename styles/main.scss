@@ -5,11 +5,12 @@ html
   box-sizing: inherit;
 
 html, body
+  position: relative
   height: 100%;
   width: 100%;
   margin: 0
   padding: 0
-  overflow: hidden
+  overflow-y: auto
   background:
     image: radial-gradient(ellipse farthest-corner at left bottom, #FEE531 0%, #FAD638 100%);
     repeat: no-repeat
@@ -27,15 +28,14 @@ ul
   text-align: left
   width: 300px;
   position: absolute
-  top: 0
+  top: 12px
   left: 0
   right: 0
-  bottom: 0
-  margin: auto auto
+  margin: 0 auto
   min-height: 520px;
   max-height: 540px;
   height: 90%;
-  transform: translateY(6%);
+  transform: translateY(0);
   &:after
     content: ""
     display: table
@@ -46,6 +46,7 @@ ul
   display: inline-block
   width: 100px
   height: 90%
+  transform: translateY(11%);
 .progress__bar
   top: 0
   height: 0
@@ -113,7 +114,7 @@ ul
   margin: auto auto
 .list__grid
   position: relative
-  transform: translate3d(0,-11%,0);
+  margin-top: 24px
   display: inline-block
   width: 100px
   height: 90%
@@ -204,6 +205,8 @@ $itemZindex: 100
   width: 100%
   height: 8%
   right: 8%;
+  bottom: -9%
+  margin-bottom: 24px
 .btn
   &:hover
    transform: scale(1.4)
